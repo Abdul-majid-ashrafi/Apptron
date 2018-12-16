@@ -1,8 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-
 export class HomeComponent extends Component {
+    constructor() {
+        super();
+        this.state = {
+            userName: "Sir"
+        }
+    }
+
+    componentWillMount() {
+        console.log("render componentWillMount");
+    }
+
+    componentDidMount() {
+        console.log("render componentDidMount");
+    }
+
+    componentWillReceiveProps(props) {
+        console.log("componentWillReceiveProps", props)
+    }
+
+
     render() {
         return (
             <div>
